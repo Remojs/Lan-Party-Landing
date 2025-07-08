@@ -1,0 +1,23 @@
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set the body to take up the full height and width */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+/* Apply a beautiful font */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
