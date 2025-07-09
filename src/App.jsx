@@ -48,7 +48,7 @@ export default function App() {
         </div>
 
         <h1 className={styles.title}>Juegos Opcionales</h1>
-        <p className={styles.subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p className={styles.subtitle}>Pueden descargarlos si pinta y tienen espacio libre, si sale entre todos joya, sino cuando quedan pocos despiertos o si se dividen las sesiones de juego y demas. Pocas copias de todas maneras</p>
         <div className={styles.grid}>
           {optionalGames.map((game) => (
             <GameCard
@@ -61,7 +61,7 @@ export default function App() {
         </div>
 
         <h1 className={styles.title}>Juegos en local - Pc Thiago</h1>
-        <p className={styles.subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p className={styles.subtitle}>Juegos para jugar en la PC de Thiago, con los controles (Maximo 4)</p>
         <div className={styles.grid}>
           {localGames.map((game) => (
             <div className={styles.card} key={game.id}>
