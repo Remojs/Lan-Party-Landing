@@ -1,127 +1,11 @@
 "use client"
 
-import { useState } from "react"
-import styles from "./App.module.css"
+import { useState } from "react";
+import styles from "./App.module.css";
+import gameData from "./assets/gamedata.json";
+import optionalGames from "./assets/optionalgames.json";
+import localGames from "./assets/localgamesdata.json";
 
-const gameData = [
-  {
-    id: 1,
-    title: "Cyberpunk 2077",
-    image: "/placeholder.svg?height=400&width=300",
-    price: "$59.99",
-    copies: 3,
-    owners: ["rober", "thiago", "fran"],
-    isMultiplayer: false,
-    isCooperative: false,
-    isSurvival: false,
-    isShooter: true,
-    playerCount: "1",
-  },
-  {
-    id: 2,
-    title: "Valheim",
-    image: "/placeholder.svg?height=400&width=300",
-    price: "$19.99",
-    copies: 6,
-    owners: ["rober", "thiago", "fran", "kevin", "lucas", "mati"],
-    isMultiplayer: true,
-    isCooperative: true,
-    isSurvival: true,
-    isShooter: false,
-    playerCount: "1-10",
-  },
-  {
-    id: 3,
-    title: "Call of Duty",
-    image: "/placeholder.svg?height=400&width=300",
-    price: "$69.99",
-    copies: 4,
-    owners: ["rober", "kevin", "lucas", "mati"],
-    isMultiplayer: true,
-    isCooperative: true,
-    isSurvival: false,
-    isShooter: true,
-    playerCount: "1-150",
-  },
-  {
-    id: 4,
-    title: "Minecraft",
-    image: "/placeholder.svg?height=400&width=300",
-    price: "$26.95",
-    copies: 5,
-    owners: ["thiago", "fran", "kevin", "lucas", "mati"],
-    isMultiplayer: true,
-    isCooperative: true,
-    isSurvival: true,
-    isShooter: false,
-    playerCount: "1-∞",
-  },
-  {
-    id: 5,
-    title: "Apex Legends",
-    image: "/placeholder.svg?height=400&width=300",
-    price: "Free",
-    copies: 6,
-    owners: ["rober", "thiago", "fran", "kevin", "lucas", "mati"],
-    isMultiplayer: true,
-    isCooperative: false,
-    isSurvival: true,
-    isShooter: true,
-    playerCount: "3-60",
-  },
-  {
-    id: 6,
-    title: "Stardew Valley",
-    image: "/placeholder.svg?height=400&width=300",
-    price: "$14.99",
-    copies: 4,
-    owners: ["rober", "thiago", "fran", "lucas"],
-    isMultiplayer: true,
-    isCooperative: true,
-    isSurvival: false,
-    isShooter: false,
-    playerCount: "1-4",
-  },
-  {
-    id: 7,
-    title: "Among Us",
-    image: "/placeholder.svg?height=400&width=300",
-    price: "$4.99",
-    copies: 6,
-    owners: ["rober", "thiago", "fran", "kevin", "lucas", "mati"],
-    isMultiplayer: true,
-    isCooperative: false,
-    isSurvival: false,
-    isShooter: false,
-    playerCount: "4-15",
-  },
-  {
-    id: 8,
-    title: "Rocket League",
-    image: "/placeholder.svg?height=400&width=300",
-    price: "Free",
-    copies: 5,
-    owners: ["rober", "kevin", "lucas", "mati", "fran"],
-    isMultiplayer: true,
-    isCooperative: true,
-    isSurvival: false,
-    isShooter: false,
-    playerCount: "1-8",
-  },
-  {
-    id: 9,
-    title: "The Forest",
-    image: "/placeholder.svg?height=400&width=300",
-    price: "$19.99",
-    copies: 3,
-    owners: ["thiago", "kevin", "lucas"],
-    isMultiplayer: true,
-    isCooperative: true,
-    isSurvival: true,
-    isShooter: false,
-    playerCount: "1-8",
-  },
-]
 
 export default function App() {
   const [openCards, setOpenCards] = useState([])
@@ -150,23 +34,43 @@ export default function App() {
 
       {/* Main Content */}
       <div className={styles.mainContent}>
-        <h1 className={styles.title}>Game Collection</h1>
-
+        <h1 className={styles.title}>Lista de Juegos - Lan party</h1>
+        <p className={styles.subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <div className={styles.grid}>
-          {gameData.map((game) => {
-            // Log which cards are in the openCards array
-            const isOpen = openCards.includes(game.id);
-            console.log(`Rendering card ${game.id}, isOpen: ${isOpen}, openCards: [${openCards.join(', ')}]`);
-            
-            return (
-              <GameCard
-                key={game.id}
-                game={game}
-                isOpen={isOpen}
-                onToggle={() => toggleCard(game.id)}
-              />
-            );
-          })}
+          {gameData.map((game) => (
+            <GameCard
+              key={game.id}
+              game={game}
+              isOpen={openCards.includes(game.id)}
+              onToggle={() => toggleCard(game.id)}
+            />
+          ))}
+        </div>
+
+        <h1 className={styles.title}>Juegos Opcionales</h1>
+        <p className={styles.subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div className={styles.grid}>
+          {optionalGames.map((game) => (
+            <GameCard
+              key={game.id}
+              game={game}
+              isOpen={openCards.includes(game.id)}
+              onToggle={() => toggleCard(game.id)}
+            />
+          ))}
+        </div>
+
+        <h1 className={styles.title}>Juegos en local - Pc Thiago</h1>
+        <p className={styles.subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div className={styles.grid}>
+          {localGames.map((game) => (
+            <div className={styles.card} key={game.id}>
+              <div className={styles.imageContainer}>
+                <img src={game.image} alt={game.title} className={styles.gameImage} />
+              </div>
+              <h3 className={styles.gameTitle}>{game.title}</h3>
+            </div>
+          ))}
         </div>
       </div>
     </div>

@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "link": "https://store.steampowered.com/app/3097560/Liars_Bar/",
+    "title": "Liar's Bar",
+    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3097560/779fd888bc6ac673dd75254aad814b7e8a47ce7a/header.jpg?t=1750969308",
+    "price": "$3.99",
+    "copies": "2",
+    "owners": ["Rober", "Thiago"],
+    "isMultiplayer": true,
+    "isCooperative": false,
+    "isSurvival": false,
+    "isShooter": false,
+    "playerCount": "4"
+  },
+  {
+    "id": 2,
+    "link": "https://store.steampowered.com/app/218620/PAYDAY_2/",
+    "title": "Pay Day 2",
+    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/218620/header.jpg?t=1748420788",
+    "price": "$9.99",
+    "copies": "4",
+    "owners": ["Rober", "Lucas", "Kevin", "Mati"],
+    "isMultiplayer": true,
+    "isCooperative": true,
+    "isSurvival": false,
+    "isShooter": false,
+    "playerCount": "4"
+  },
+  {
+    "id": 3,
+    "link": "https://store.steampowered.com/app/444090/Paladins/",
+    "title": "Paladins",
+    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/444090/header.jpg?t=1713560419",
+    "price": "Free",
+    "copies": "-",
+    "owners": [],
+    "isMultiplayer": true,
+    "isCooperative": false,
+    "isSurvival": false,
+    "isShooter": true,
+    "playerCount": "5"
+  },
+  {
+    "id": 4,
+    "link": "https://store.steampowered.com/app/1966720/Lethal_Company/",
+    "title": "Lethal Company",
+    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1966720/header.jpg?t=1750273815",
+    "price": "$5.79",
+    "copies": "2",
+    "owners": ["Rober", "Fran"],
+    "isMultiplayer": true,
+    "isCooperative": false,
+    "isSurvival": false,
+    "isShooter": true,
+    "playerCount": "5"
+  },{
+    "id": 5,
+    "link": "https://store.steampowered.com/app/1304930/The_Outlast_Trials/",
+    "title": "Outlast Trials",
+    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1304930/50246c247bf813b707c2c7cee7b7ad29148e0228/header.jpg?t=1745332104",
+    "price": "$18.99",
+    "copies": "3",
+    "owners": ["Rober", "Lucas", "Mati"],
+    "isMultiplayer": true,
+    "isCooperative": false,
+    "isSurvival": false,
+    "isShooter": true,
+    "playerCount": "5"
+  }
+]
