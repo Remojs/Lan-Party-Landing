@@ -87,6 +87,16 @@
   -webkit-text-fill-color: transparent;
 }
 
+.subtitle {
+  font-size: 1rem;
+  color: #d1d5db;
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -95,6 +105,7 @@
   margin: 0 auto;
   grid-auto-rows: min-content; /* Ensure rows only take the size they need */
   align-items: start; /* Align items to the start of their grid areas */
+  margin-bottom: 5rem;
 }
 
 @media (min-width: 768px) {
@@ -147,6 +158,11 @@
   color: #a78bfa;
   font-size: 0.875rem;
   font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background with 50% transparency */
+  color: white; /* Ensure the text is readable */
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  font-size: 1rem; /* Adjust font size as needed */
 }
 
 .cardContent {

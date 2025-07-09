@@ -34,8 +34,8 @@ export default function App() {
 
       {/* Main Content */}
       <div className={styles.mainContent}>
-        <h1 className={styles.title}>Lista de Juegos - Lan party</h1>
-        <p className={styles.subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h1 className={styles.title}>LAN PARTY II: Official Game List</h1>
+        <p className={styles.subtitle}>Lista de juegos oficial y obligatoria de la Lan Party. En caso de no tener las copias necesarias de un juego (5), descargarlo y no comprarlo aun, en caso de jugarlo en la lan party se compra en el momento, total ya esta descargado</p>
         <div className={styles.grid}>
           {gameData.map((game) => (
             <GameCard
@@ -78,13 +78,10 @@ export default function App() {
 }
 
 function GameCard({ game, isOpen, onToggle }) {
-  // Log the open state for debugging
-  console.log(`Card ${game.id} isOpen: ${isOpen}`);
-  
   return (
     <div className={styles.card}>
       {/* Number Circle */}
-      {!isOpen && <div className={styles.numberCircle}>{game.id}</div>}
+      {!isOpen && <div className={styles.numberCircle}>{game.copies}</div>}
 
       <div className={styles.cardContent}>
         {/* Image Container */}
